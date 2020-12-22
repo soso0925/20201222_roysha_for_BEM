@@ -1,0 +1,79 @@
+$base-color: #6C6C6F;
+$bg-color: #123D88;
+
+@mixin basic-inner{
+  width: 92%;
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+@mixin basic-flex{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* ベース
+---------------------------*/
+body{
+  color: $base-color;
+  font-size: 16px;
+  font-family: Helvetica, Arial, sans-serif;
+  line-height: (28/16);
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+ul{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+}
+
+/* header */
+.header{
+  padding: 30px 0;
+  background-color: $bg-color;
+
+  &__inner{
+    @include basic-inner;
+    @include basic-flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__title{
+    line-height: 1;
+  }
+}
+
+/* g-nav */
+.g-nav{
+
+  &__list{
+    @include basic-flex;
+  }
+
+  &__item{
+    margin-left: 30px;
+  }
+
+  &__link{
+    color: #fff;
+  }
+}
+
+/* features */
+.features{
+
+  &__inner{
+    @include basic-inner;
+    @include basic-flex;
+    justify-content: space-between;
+  }
+}
